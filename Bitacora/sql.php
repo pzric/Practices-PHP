@@ -13,19 +13,20 @@ while ($extraido=mysqli_fetch_array($query)){
   }
 echo "</table>";
 
-$sql2=("SELECT clave_carrera FROM carrera LEFT JOIN departamento ON carrera.clave_carrera = departamento.num_departamento INTERSECT
-        SELECT clave_carrera FROM carrera RIGHT JOIN departamento ON carrera.clave_carrera = departamento.num_departamento");
+$sql2=("SELECT clave_carrera,nom_carrera,num_depto FROM carrera LEFT JOIN departamento ON carrera.clave_carrera = departamento.num_departamento INTERSECT
+        SELECT clave_carrera,nom_carrera,num_depto FROM carrera RIGHT JOIN departamento ON carrera.clave_carrera = departamento.num_departamento");
 $query2=mysqli_query($mysqli,$sql2);
 echo "<table class='table table-hover'><thead><tr>";
 echo "<th scope='col'>Id";
 echo "<th scope='col'>Nombre";
-echo "<th scope='col'>Carrera</tr></thead>";
+echo "<th scope='col'>Departamento</tr></thead>";
 while ($extraido2=mysqli_fetch_array($query2)){
   echo "<tbody><tr><td>",$extraido2[0];
-  echo "<td>",$extraido2[0];
-  echo "<td>",$extraido2[0];
+  echo "<td>",$extraido2[1];
+  echo "<td>",$extraido2[2];
   echo "</tr></tbody>";
   }
 echo "</table>";
 
  ?>
+
