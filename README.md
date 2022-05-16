@@ -1,2 +1,2 @@
 # Practices
-school practices
+simple practices
