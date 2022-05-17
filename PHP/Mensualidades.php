@@ -4,7 +4,7 @@ $b = 24965; //Monto
 $suma = 0;
 $c = intdiv($b, $a);
 $d = $b % $a;
-for ($i = 1; $i <= 12; $i++) {
+for ($i = 1; $i <= $a; $i++) {
     if ($i == 12) {
         $res = $c + $d;
         echo "La mensualidad ".$i." es: ".$res."\n";
