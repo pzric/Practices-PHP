@@ -12,6 +12,7 @@
      <form class='cua' action='inicio.php' method='POST'>";
       <h1>Felicidades</h1>
       <h1>Has terminado</h1>
+      <?php echo ":)" ?>
      </form>
    </body>
  </html>
